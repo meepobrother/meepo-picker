@@ -132,7 +132,7 @@ export class DateTimeComponent implements OnInit, AfterViewInit, AfterContentIni
                 value: {
                     year: year,
                     month: month,
-                    day: time.getDay()
+                    day: time.getDate()
                 },
                 title: weeks[time.getDay()]
             });
