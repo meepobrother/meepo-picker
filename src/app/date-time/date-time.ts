@@ -1,10 +1,10 @@
 import {
     Component, OnInit, HostListener,
-    ViewEncapsulation, ElementRef, Input,
+    ViewEncapsulation, Input,
     Output, EventEmitter
 } from '@angular/core';
 import MobileSelect from 'mobile-select';
-
+import { UuidService } from 'meepo-uuid';
 @Component({
     selector: '[dateTime]',
     templateUrl: './date-time.html',
@@ -42,10 +42,12 @@ export class DateTimeComponent implements OnInit {
     onOpen() {
         this.picker.show();
     }
-
+    id: string;
     constructor(
-        public ele: ElementRef
-    ) { }
+        public uuid: UuidService
+    ) {
+        this.id = this.uuid.v1();
+    }
 
     ngOnInit() {
         let times = getTimes();
@@ -67,7 +69,7 @@ export function getWeeks() {
         let j = 7 - (day + 7) + i;
         time.setDate(time.getDate() + j);
         resultes.push({
-            id: `week-${i}`,
+            id: `${this.id}-week-${i}`,
             value: {
                 year: year,
                 month: month,
@@ -99,7 +101,7 @@ export function getTimes() {
         minutesItems.map(j => {
             let j_str = toTenStr(j);
             times.push({
-                id: `time-${i}`,
+                id: `${this.id}-time-${i}`,
                 value: {
                     hour: i,
                     minute: j

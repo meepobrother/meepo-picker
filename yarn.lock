@@ -91,6 +91,12 @@
   optionalDependencies:
     node-sass "^4.3.0"
 
+"@angular/common@5.2.0-beta.1":
+  version "5.2.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.2.0-beta.1.tgz#4d4a5c191faff678cbbb20e9366ce47f726429a2"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/common@^5.1.0":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.1.1.tgz#b6444cf6508f9b0b5fc4c9b3107b3e37be1336c9"
@@ -112,6 +118,12 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/core@5.2.0-beta.1":
+  version "5.2.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.2.0-beta.1.tgz#14984b81dd31ae35fe73d8063710eb4007756921"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/core@^5.1.0":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.1.1.tgz#b6a6e2b2284f86279f096d857253f6643098d908"
@@ -121,6 +133,12 @@
 "@angular/platform-browser-dynamic@^5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.1.1.tgz#4b7bd1cbdb3c93fdeb626b38fbd54286a73a76d0"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/platform-browser@5.2.0-beta.1":
+  version "5.2.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-5.2.0-beta.1.tgz#44a971d9cfd3675c10f9924ffe0784b23a2e6bd3"
   dependencies:
     tslib "^1.7.1"
 
@@ -3246,6 +3264,18 @@ md5.js@^1.3.4:
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
+
+meepo-uuid@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/meepo-uuid/-/meepo-uuid-1.0.8.tgz#834e13cf8e12745ab19d3a303844b50988dabf0c"
+  dependencies:
+    "@angular/common" "5.2.0-beta.1"
+    "@angular/core" "5.2.0-beta.1"
+    "@angular/platform-browser" "5.2.0-beta.1"
+    reflect-metadata "^0.1.10"
+    rxjs "^5.5.5"
+    uuid "^3.1.0"
+    zone.js "0.8.4"
 
 mem@^1.1.0:
   version "1.1.0"
