@@ -1,5 +1,5 @@
 {
-    "name": "meepo-datetime",
+    "name": "meepo-picker",
     "version": "1.0.0",
     "description": "date time for angular",
     "main": "./bundles/meepo.umd.js",
@@ -18,15 +18,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/meepobrother/meepo-datetime.git"
+        "url": "git+https://github.com/meepobrother/meepo-picker.git"
     },
     "keywords": [],
     "author": "imeepos",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/meepobrother/meepo-datetime/issues"
+        "url": "https://github.com/meepobrother/meepo-picker/issues"
     },
-    "homepage": "https://github.com/meepobrother/meepo-datetime/README.md",
+    "homepage": "https://github.com/meepobrother/meepo-picker/README.md",
     "devDependencies": {
         "@angular/cli": "^1.6.1",
         "@angular/compiler": "^5.1.0",

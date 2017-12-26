@@ -251,7 +251,7 @@ switch (target) {
 
 export default {
     exports: 'named',
-    name: 'meepo-datetime',
+    name: 'meepo-picker',
     plugins,
     external: Object.keys(globals),
     globals,
