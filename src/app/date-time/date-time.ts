@@ -1,22 +1,44 @@
 import {
     Component, OnInit, HostListener,
     ViewEncapsulation, Input,
-    Output, EventEmitter, AfterViewInit
+    Output, EventEmitter, AfterViewInit, AfterContentInit,
+    ViewChild, ElementRef
 } from '@angular/core';
 import MobileSelect from 'mobile-select';
 import { UuidService } from 'meepo-uuid';
+export class MyMobileSelect extends MobileSelect {
+    constructor(cfg: any) {
+        super(cfg);
+    }
+
+    init(cfg: any) {
+        console.log(typeof cfg.trigger);
+        if (typeof cfg.trigger === 'string') {
+            super.init(cfg);
+        } else {
+            let id = cfg.trigger.id;
+            cfg.trigger = '#' + id;
+            super.init(cfg);
+        }
+    }
+}
 @Component({
     selector: '[dateTime]',
     templateUrl: './date-time.html',
     styleUrls: ['./date-time.scss'],
     encapsulation: ViewEncapsulation.None
 })
-
-export class DateTimeComponent implements OnInit, AfterViewInit {
+export class DateTimeComponent implements OnInit, AfterViewInit, AfterContentInit {
     picker: any;
-    @Input() dateTime(val: string) {
+    @ViewChild('picker') _picker: ElementRef;
+    @Input()
+    set dateTime(val: string) {
         if (val) {
-            this.cfg.title = val;
+            if (this.picker) {
+                this.picker.setTitle(val);
+            } else {
+                this.cfg.title = val;
+            }
         }
     }
 
@@ -41,7 +63,7 @@ export class DateTimeComponent implements OnInit, AfterViewInit {
     onOpen() {
         this.picker.show();
     }
-    id: string;
+    id: any = new Date().getTime();
     constructor(
         public uuid: UuidService
     ) {
@@ -55,10 +77,12 @@ export class DateTimeComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         let times = this.getTimes();
         let weeks = this.getWeeks();
-        this.cfg.trigger = `#${this.id}`;
+        this.cfg.trigger = this._picker.nativeElement;
         this.cfg.wheels.push({ data: weeks }, { data: times });
-        this.picker = new MobileSelect(this.cfg);
+        this.picker = new MyMobileSelect(this.cfg);
     }
+
+    ngAfterContentInit() { }
 
     getTimes() {
         // 从现在到24点

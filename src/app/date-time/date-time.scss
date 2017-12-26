@@ -167,3 +167,23 @@
 .mobileSelect-show .content {
     bottom: 0;
 }
+
+:host {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.time_icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    background-image: url("./time_full.png");
+}
+.time_container {
+    display: inline-block;
+}
