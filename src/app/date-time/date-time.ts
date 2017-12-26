@@ -1,7 +1,7 @@
 import {
     Component, OnInit, HostListener,
     ViewEncapsulation, Input,
-    Output, EventEmitter
+    Output, EventEmitter, AfterViewInit
 } from '@angular/core';
 import MobileSelect from 'mobile-select';
 import { UuidService } from 'meepo-uuid';
@@ -12,7 +12,7 @@ import { UuidService } from 'meepo-uuid';
     encapsulation: ViewEncapsulation.None
 })
 
-export class DateTimeComponent implements OnInit {
+export class DateTimeComponent implements OnInit, AfterViewInit {
     picker: any;
     @Input() dateTime(val: string) {
         if (val) {
@@ -23,7 +23,6 @@ export class DateTimeComponent implements OnInit {
     @Output() onPicker: EventEmitter<any> = new EventEmitter();
 
     cfg: any = {
-        trigger: '#date_time',
         title: '请选择日期',
         wheels: [],
         position: [0, 2],
@@ -50,8 +49,13 @@ export class DateTimeComponent implements OnInit {
     }
 
     ngOnInit() {
+
+    }
+
+    ngAfterViewInit() {
         let times = this.getTimes();
         let weeks = this.getWeeks();
+        this.cfg.trigger = `#${this.id}`;
         this.cfg.wheels.push({ data: weeks }, { data: times });
         this.picker = new MobileSelect(this.cfg);
     }
