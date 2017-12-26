@@ -1,4 +1,8 @@
-import { Component, OnInit, HostListener, ViewEncapsulation, ElementRef, Input } from '@angular/core';
+import {
+    Component, OnInit, HostListener,
+    ViewEncapsulation, ElementRef, Input,
+    Output, EventEmitter
+} from '@angular/core';
 import MobileSelect from 'mobile-select';
 
 @Component({
@@ -9,11 +13,15 @@ import MobileSelect from 'mobile-select';
 })
 
 export class DateTimeComponent implements OnInit {
+    picker: any;
     @Input() dateTime(val: string) {
         if (val) {
             this.cfg.title = val;
         }
     }
+
+    @Output() onPicker: EventEmitter<any> = new EventEmitter();
+
     cfg: any = {
         trigger: '#date_time',
         title: '请选择日期',
@@ -25,15 +33,16 @@ export class DateTimeComponent implements OnInit {
             childs: 'children'
         },
         callback: (indexArr, data) => {
-            console.log(indexArr, data);
+            let res = { ...data[0].value, ...data[1].value };
+            this.onPicker.next(res);
         }
     };
+
     @HostListener('click', ['$event'])
     onOpen() {
-        var mobileSelect1 = new MobileSelect(this.cfg);
-        console.log(mobileSelect1);
-        mobileSelect1.show();
+        this.picker.show();
     }
+
     constructor(
         public ele: ElementRef
     ) { }
@@ -42,6 +51,7 @@ export class DateTimeComponent implements OnInit {
         let times = getTimes();
         let weeks = getWeeks();
         this.cfg.wheels.push({ data: weeks }, { data: times });
+        this.picker = new MobileSelect(this.cfg);
     }
 }
 
@@ -55,7 +65,7 @@ export function getWeeks() {
     for (let i = day; i < day + 7; i++) {
         let time = new Date();
         let j = 7 - (day + 7) + i;
-        time.setDate(time.getDate()+j);
+        time.setDate(time.getDate() + j);
         resultes.push({
             id: `week-${i}`,
             value: {

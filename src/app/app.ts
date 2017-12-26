@@ -11,4 +11,4 @@ import { DateTimeComponent } from './date-time/date-time';
     ],
     providers: [],
 })
-export class DateTimeModule {}
+export class PickerModule {}
