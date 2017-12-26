@@ -174,7 +174,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    
 }
 
 .time_icon {
@@ -183,7 +182,9 @@
     height: 15px;
     background-size: cover;
     background-image: url("./time_full.png");
+    margin-right: 5px;
 }
+
 .time_container {
     display: inline-block;
 }
