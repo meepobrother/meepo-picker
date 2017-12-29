@@ -1,6 +1,6 @@
 {
     "name": "meepo-picker",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "date time for angular",
     "main": "./bundles/meepo.umd.js",
     "module": "./esm5/meepo.js",
@@ -47,8 +47,8 @@
         "@angular/common": "5.2.0-beta.1",
         "@angular/core": "5.2.0-beta.1",
         "@angular/platform-browser": "5.2.0-beta.1",
-        "meepo-uuid": ">=1.0.8",
-        "mobile-select": "^1.0.10",
+        "meepo-uuid": ">=1.1.1",
+        "mobile-select": ">=1.0.10",
         "reflect-metadata": "^0.1.10",
         "rxjs": "^5.5.5",
         "zone.js": "0.8.4"
