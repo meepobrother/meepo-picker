@@ -231,7 +231,8 @@ let globals = {
     'rxjs/operators/throttleTime': 'Rx.Observable.prototype',
     'rxjs/operators/tap': 'Rx.Observable.prototype',
 
-    'mobile-select': 'mobile-select'
+    'mobile-select': 'mobile-select',
+    'meepo-uuid': 'meepo-uuid'
 };
 
 let plugins = [

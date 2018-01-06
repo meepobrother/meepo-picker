@@ -735,8 +735,13 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
+<<<<<<< HEAD
   version "1.0.30000787"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000787.tgz#ca07a281be536a88bd7fac96ba895f3cf53f811b"
+=======
+  version "1.0.30000784"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000784.tgz#1be95012d9489c7719074f81aee57dbdffe6361b"
+>>>>>>> 67d0ea8a8b63a0282583ddaf467280354f4040e2
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -2944,9 +2949,15 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
+<<<<<<< HEAD
 meepo-uuid@>=1.0.8:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/meepo-uuid/-/meepo-uuid-1.1.2.tgz#181aa33edc198433251f5b29ea77cdb61356f988"
+=======
+meepo-uuid@>=1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/meepo-uuid/-/meepo-uuid-1.1.1.tgz#acc49a6dac78f5ca0d13119dd8b6c3607914e473"
+>>>>>>> 67d0ea8a8b63a0282583ddaf467280354f4040e2
   dependencies:
     "@angular/common" ">=5.1.2"
     "@angular/core" ">=5.1.2"
@@ -3092,7 +3103,11 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
+<<<<<<< HEAD
 mobile-select@^1.0.10:
+=======
+mobile-select@>=1.0.10:
+>>>>>>> 67d0ea8a8b63a0282583ddaf467280354f4040e2
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/mobile-select/-/mobile-select-1.0.11.tgz#189b0127003bd3621a880980d41186fd7e707ad1"
 
@@ -3410,10 +3425,13 @@ p-map@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
 
+<<<<<<< HEAD
 p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
+=======
+>>>>>>> 67d0ea8a8b63a0282583ddaf467280354f4040e2
 pako@~1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
