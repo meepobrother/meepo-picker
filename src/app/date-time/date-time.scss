@@ -110,17 +110,13 @@
     width: 50%;
     height: 200px;
     overflow: hidden;
-    -webkit-transition: width 0.3s ease;
     transition: width 0.3s ease;
 }
 
 .mobileSelect .content .panel .wheel .selectContainer {
     display: block;
     text-align: center;
-    -webkit-transition: -webkit-transform 0.18s ease-out;
-    transition: -webkit-transform 0.18s ease-out;
     transition: transform 0.18s ease-out;
-    transition: transform 0.18s ease-out, -webkit-transform 0.18s ease-out;
 }
 
 .mobileSelect .content .panel .wheel .selectContainer li {
@@ -151,8 +147,6 @@
     top: 0;
     width: 100%;
     height: 200px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
-    background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
     background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
     opacity: 0.9;
     pointer-events: none;
@@ -181,7 +175,7 @@
     width: 15px;
     height: 15px;
     background-size: cover;
-    background-image: url("./time_full.png");
+    background-image: url('./time_full.png');
     margin-right: 5px;
 }
 
