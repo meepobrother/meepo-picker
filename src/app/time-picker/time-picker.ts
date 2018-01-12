@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef, ChangeDetectorRef, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, forwardRef, ChangeDetectorRef, ChangeDetectionStrategy, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const EXE_COUNTER_VALUE_ACCESSOR: any = {
@@ -10,7 +10,8 @@ export const EXE_COUNTER_VALUE_ACCESSOR: any = {
     selector: 'time-picker',
     templateUrl: './time-picker.html',
     styleUrls: ['./time-picker.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TimePickerComponent implements OnInit, ControlValueAccessor {
     @Input('now') isCoach: boolean = true;
@@ -31,13 +32,15 @@ export class TimePickerComponent implements OnInit, ControlValueAccessor {
     }
 
     doNow() {
-        this.isCoach = false;
-        this.cd.detectChanges();
+        setTimeout(() => {
+            this.isCoach = false;
+        }, 0);
     }
 
     doCoach() {
-        this.isCoach = true;
-        this.cd.detectChanges();
+        setTimeout(() => {
+            this.isCoach = true;
+        }, 0);
     }
 
     timePicker(e: any) {
