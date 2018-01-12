@@ -1,0 +1,40 @@
+.time_select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    height: 44px;
+    .time_select_item {
+        padding: 6px 7px;
+        font-size: .9em;
+        &.active {
+            position: relative;
+            &:after {
+                content: " ";
+                position: absolute;
+                height: 1px;
+                background-color: orangered;
+                color: orangered;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                transform: scaleY(.5);
+            }
+        }
+    }
+    .time_select_item_divider {
+        width: 10px;
+    }
+}
+.time_select_detail {
+    text-align: center;
+    font-size: .8em;
+    line-height: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    padding-bottom: 10px;
+}

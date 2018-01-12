@@ -1,0 +1,8 @@
+<div class="time_select">
+    <div [class.active]="!isCoach" (click)="doNow()" class="time_select_item">现在</div>
+    <div class="time_select_item_divider"></div>
+    <div [class.active]="isCoach" (click)="doCoach()" class="time_select_item">预约</div>
+</div>
+<div class="time_select_detail" dateTime="请选择预约时间" (onPicker)="timePicker($event)" *ngIf="isCoach">
+    请选择预约时间
+</div>
