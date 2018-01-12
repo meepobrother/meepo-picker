@@ -13,8 +13,7 @@ export const EXE_COUNTER_VALUE_ACCESSOR: any = {
     encapsulation: ViewEncapsulation.None
 })
 export class TimePickerComponent implements OnInit, ControlValueAccessor {
-    @Input() isCoach: boolean = false;
-
+    @Input('now') isCoach: boolean = true;
     _model: any;
     set model(val: any) {
         this._model = val;
