@@ -10,9 +10,7 @@ export class MyMobileSelect extends MobileSelect {
     constructor(cfg: any) {
         super(cfg);
     }
-
     init(cfg: any) {
-        console.log(typeof cfg.trigger);
         if (typeof cfg.trigger === 'string') {
             super.init(cfg);
         } else {
