@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, forwardRef, ChangeDetectorRef, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const EXE_COUNTER_VALUE_ACCESSOR: any = {
@@ -23,16 +23,22 @@ export class TimePickerComponent implements OnInit, ControlValueAccessor {
     get model() {
         return this._model;
     }
-    constructor() { }
+    constructor(
+        public cd: ChangeDetectorRef
+    ) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+
+    }
 
     doNow() {
         this.isCoach = false;
+        this.cd.detectChanges();
     }
 
     doCoach() {
         this.isCoach = true;
+        this.cd.detectChanges();
     }
 
     timePicker(e: any) {
