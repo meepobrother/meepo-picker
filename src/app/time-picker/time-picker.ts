@@ -32,15 +32,13 @@ export class TimePickerComponent implements OnInit, ControlValueAccessor {
     }
 
     doNow() {
-        setTimeout(() => {
-            this.isCoach = false;
-        }, 0);
+        this.isCoach = false;
+        this.cd.detectChanges();
     }
 
     doCoach() {
-        setTimeout(() => {
-            this.isCoach = true;
-        }, 0);
+        this.isCoach = true;
+        this.cd.detectChanges();
     }
 
     timePicker(e: any) {
