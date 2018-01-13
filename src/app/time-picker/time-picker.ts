@@ -10,8 +10,7 @@ export const EXE_COUNTER_VALUE_ACCESSOR: any = {
     selector: 'time-picker',
     templateUrl: './time-picker.html',
     styleUrls: ['./time-picker.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush
+    encapsulation: ViewEncapsulation.None
 })
 export class TimePickerComponent implements ControlValueAccessor {
     @Input('now') isCoach: boolean = true;
