@@ -13,7 +13,7 @@ export const EXE_COUNTER_VALUE_ACCESSOR: any = {
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TimePickerComponent implements OnInit, ControlValueAccessor {
+export class TimePickerComponent implements ControlValueAccessor {
     @Input('now') isCoach: boolean = true;
     _model: any;
     set model(val: any) {
@@ -27,18 +27,12 @@ export class TimePickerComponent implements OnInit, ControlValueAccessor {
         public cd: ChangeDetectorRef
     ) { }
 
-    ngOnInit() {
-
-    }
-
     doNow() {
         this.isCoach = false;
-        this.cd.detectChanges();
     }
 
     doCoach() {
         this.isCoach = true;
-        this.cd.detectChanges();
     }
 
     timePicker(e: any) {

@@ -1,6 +1,6 @@
 {
     "name": "meepo-picker",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "date time for angular",
     "main": "./bundles/meepo.umd.js",
     "module": "./esm5/meepo.js",
