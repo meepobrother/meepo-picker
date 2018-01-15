@@ -14,10 +14,13 @@ export const EXE_COUNTER_VALUE_ACCESSOR: any = {
 })
 export class TimePickerComponent implements ControlValueAccessor {
     @Input('now') isCoach: boolean = true;
+    @Output() onPicker: EventEmitter<any> = new EventEmitter();
+
     _model: any;
     set model(val: any) {
         this._model = val;
         this.propagateChange(this._model);
+        this.onPicker.emit(val);
     }
     get model() {
         return this._model;
