@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef, ChangeDetectorRef, ChangeDetectionStrategy, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, forwardRef, ChangeDetectionStrategy, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const EXE_COUNTER_VALUE_ACCESSOR: any = {
@@ -22,9 +22,7 @@ export class TimePickerComponent implements ControlValueAccessor {
     get model() {
         return this._model;
     }
-    constructor(
-        public cd: ChangeDetectorRef
-    ) { }
+    constructor() { }
 
     doNow() {
         this.isCoach = false;
